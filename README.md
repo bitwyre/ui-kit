@@ -8,19 +8,10 @@ It was created based on design principles and the brand presented and means deve
 
 ![usecase](usecase.png)
 
-## Using this example
-
-Run the following command:
-
-```sh
-npx create-turbo@latest
-```
-
 ### Apps and Packages
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@bitwyre/ui-kit`: a stub React component library shared by both `web` and `docs` applications
+- `web`: web playgrounds with [Next.js](https://nextjs.org/) app
+- `@bitwyre/ui-kit`: a stub React component library
 - `@bitwyre/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
 - `@bitwyre/typescript-config`: `tsconfig.json`s used throughout the monorepo
 
@@ -39,7 +30,7 @@ This Turborepo has some additional tools already setup for you:
 To build all apps and packages, run the following command:
 
 ```
-cd my-turborepo
+cd .
 pnpm build
 ```
 
@@ -48,7 +39,7 @@ pnpm build
 To develop all apps and packages, run the following command:
 
 ```
-cd my-turborepo
+cd .
 pnpm dev
 ```
 
@@ -59,7 +50,7 @@ Turborepo can use a technique known as [Remote Caching](https://turbo.build/repo
 By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup), then enter the following commands:
 
 ```
-cd my-turborepo
+cd .
 npx turbo login
 ```
 
@@ -71,4 +62,4 @@ Next, we can link our Turborepo to our Remote Cache by running the following com
 npx turbo link
 ```
 
-Copyright By Bitwyre Engineering Teams.
+© Copyright By Bitwyre Engineering Teams.
