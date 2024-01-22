@@ -1,0 +1,11 @@
+{
+  "name": "bitwyre-uikit",
+  "version": "1.0.0",
+  "description": "Bitwyre UI Kit",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["ui", "ui kit", "frontend"],
+  "author": "",
+  "license": "ISC"
+}
