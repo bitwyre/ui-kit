@@ -5,7 +5,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["ui", "ui kit", "frontend"],
+  "keywords": [
+    "ui",
+    "ui kit",
+    "frontend"
+  ],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "turbo": "^1.11.3"
+  }
 }
