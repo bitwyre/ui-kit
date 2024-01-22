@@ -1,6 +1,12 @@
-# Turborepo starter
+# Introduction To UI Kit
 
-This is an official starter Turborepo.
+## Why?
+
+This repository includes built-in components and was created by UI Designers and also to maintain the design consistently without changing any existing design or branding on Bitwyre.
+
+It was created based on design principles and the brand presented and means developers do not need to create components from scratch because this SDK was created for several existing projects specially for our web platform.
+
+![usecase](usecase.png)
 
 ## Using this example
 
@@ -10,17 +16,13 @@ Run the following command:
 npx create-turbo@latest
 ```
 
-## What's inside?
-
-This Turborepo includes the following packages/apps:
-
 ### Apps and Packages
 
 - `docs`: a [Next.js](https://nextjs.org/) app
 - `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+- `@bitwyre/ui-kit`: a stub React component library shared by both `web` and `docs` applications
+- `@bitwyre/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
+- `@bitwyre/typescript-config`: `tsconfig.json`s used throughout the monorepo
 
 Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
 
@@ -61,21 +63,12 @@ cd my-turborepo
 npx turbo login
 ```
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+This will authenticate the Turborepo CLI with our [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+Next, we can link our Turborepo to our Remote Cache by running the following command from the root of our Turborepo:
 
 ```
 npx turbo link
 ```
 
-## Useful Links
-
-Learn more about the power of Turborepo:
-
-- [Tasks](https://turbo.build/repo/docs/core-concepts/monorepos/running-tasks)
-- [Caching](https://turbo.build/repo/docs/core-concepts/caching)
-- [Remote Caching](https://turbo.build/repo/docs/core-concepts/remote-caching)
-- [Filtering](https://turbo.build/repo/docs/core-concepts/monorepos/filtering)
-- [Configuration Options](https://turbo.build/repo/docs/reference/configuration)
-- [CLI Usage](https://turbo.build/repo/docs/reference/command-line-reference)
+Copyright By Bitwyre Engineering Teams.
