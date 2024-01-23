@@ -1,4 +1,4 @@
-const { resolve } = require("node:path");
+const {resolve} = require("node:path");
 
 const project = resolve(process.cwd(), "tsconfig.json");
 
@@ -14,7 +14,13 @@ const project = resolve(process.cwd(), "tsconfig.json");
 
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
-  extends: ["eslint:recommended", "prettier", "eslint-config-turbo"],
+  extends: [
+    "eslint:recommended",
+    "prettier",
+    "eslint-config-turbo",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+  ],
   plugins: ["only-warn"],
   globals: {
     React: true,
@@ -38,6 +44,9 @@ module.exports = {
   ],
   overrides: [
     // Force ESLint to detect .tsx files
-    { files: ["*.js?(x)", "*.ts?(x)"] },
+    {files: ["*.js?(x)", "*.ts?(x)"]},
   ],
+  rules: {
+    "@typescript-eslint/no-explicit-any": "warn",
+  },
 };
