@@ -3,7 +3,4 @@ module.exports = {
   root: true,
   extends: ["@bitwyre/eslint-config"],
   parser: "@typescript-eslint/parser",
-  parserOptions: {
-    project: "./tsconfig.lint.json",
-  },
 };

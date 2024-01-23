@@ -1,13 +1,7 @@
 import React from "react";
-import {Button} from "@bitwyre/ui-kit/button";
 
 const HomePage = () => {
-  return (
-    <div>
-      HomePage This is the homepage
-      <Button appName="bitwyre-button">Button</Button>
-    </div>
-  );
+  return <div>HomePage</div>;
 };
 
 export default HomePage;
