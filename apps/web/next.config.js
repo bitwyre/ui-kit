@@ -1,4 +1,4 @@
 /** @type {import('next').NextConfig} */
 module.exports = {
-  transpilePackages: ["@bitwyre/ui"],
+  transpilePackages: ["@bitwyre/ui-kit"],
 };

@@ -1,4 +1,6 @@
 import "./globals.css";
+import "@bitwyre/ui-kit/global.css";
+
 import type {Metadata} from "next";
 import {Inter} from "next/font/google";
 
