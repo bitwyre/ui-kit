@@ -21,7 +21,7 @@ module.exports = {
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
   ],
-  plugins: ["only-warn"],
+  plugins: ["react", "react-hooks", "@typescript-eslint", "tailwindcss"],
   globals: {
     React: true,
     JSX: true,
@@ -47,6 +47,22 @@ module.exports = {
     {files: ["*.js?(x)", "*.ts?(x)"]},
   ],
   rules: {
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        varsIgnorePattern: "^_",
+        argsIgnorePattern: "^_",
+      },
+    ],
+    "react-hooks/rules-of-hooks": "error",
+    "react/no-unknown-property": "off",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/prop-types": "off",
+    "react/react-in-jsx-scope": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/no-explicit-any": "warn",
+    "tailwindcss/classnames-order": "warn",
+    "tailwindcss/no-contradicting-classname": "warn",
   },
 };
