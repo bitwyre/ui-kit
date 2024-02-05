@@ -1,5 +1,5 @@
 {
-  "extends": "@bitwyre/typescript-config/react-library.json",
+  "extends": "@bitwyre/typescript-config/base.json",
   "compilerOptions": {
     "outDir": "dist"
   },
