@@ -22,7 +22,8 @@ In your typescript config `tsconfig.json`
       {
         "name": "next"
       }
-    ]
+    ],
+    "jsx": "react-jsx"
   },
   "include": [
     "next-env.d.ts",
@@ -37,4 +38,4 @@ In your typescript config `tsconfig.json`
 
 ## What's in here
 
-@bitwyre/typescript-config that including a compilerOptions that mostly used in our projects and other tools that using typescript
+@bitwyre/typescript-config that including a compilerOptions and other configs that mostly used in our projects and other tools that using typescript

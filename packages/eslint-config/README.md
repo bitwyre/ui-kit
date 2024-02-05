@@ -30,10 +30,12 @@ module.exports = {
 - eslint-plugin-react : rule of react usage
 - eslint-plugin-tailwindcss : to rule tailwind classes
 
-Please also for sorting classes tailwind you need to install tailwind sort package by
+Please also for sorting classes tailwind you need to install prettier plugin for sort package by
 
 ```bash
 npm install prettier-plugin-tailwindcss -D
+# or
+yarn add -D prettier-plugin-tailwindcss
 ```
 
 and extend it into your prettier configuration for auto formating
