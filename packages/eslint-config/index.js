@@ -16,8 +16,9 @@ module.exports = {
     "eslint-config-turbo",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
+    "plugin:sonarjs/recommended",
   ],
-  plugins: ["react", "react-hooks", "@typescript-eslint", "tailwindcss"],
+  plugins: ["react", "react-hooks", "@typescript-eslint", "tailwindcss", "sonarjs"],
   globals: {
     React: true,
     JSX: true,
@@ -25,6 +26,7 @@ module.exports = {
   env: {
     browser: true,
   },
+  parser: "@typescript-eslint/parser",
   settings: {
     "import/resolver": {
       typescript: {

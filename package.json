@@ -7,7 +7,7 @@
     "playgrounds": "turbo run dev --filter=web",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "publish": "Makefile release"
+    "publish": "make release"
   },
   "devDependencies": {
     "@bitwyre/eslint-config": "workspace:*",

@@ -29,6 +29,7 @@ module.exports = {
 - eslint-plugin-react-hooks : rule of hooks usage
 - eslint-plugin-react : rule of react usage
 - eslint-plugin-tailwindcss : to rule tailwind classes
+- eslint-plugin-sonarjs : Automate rules for typescript with sonarlint and eslint parser
 
 Please also for sorting classes tailwind you need to install prettier plugin for sort package by
 

@@ -1,21 +1,22 @@
 {
   "name": "@bitwyre/eslint-config",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "private": false,
   "main": "./index.js",
   "files": [
     "index.js"
   ],
   "dependencies": {
-    "@typescript-eslint/parser": "^6.17.0",
-    "@typescript-eslint/eslint-plugin": "^6.17.0",
     "@types/eslint-config-prettier": "^6.11.0",
-    "eslint-config-turbo": "^1.11.3",
+    "@typescript-eslint/eslint-plugin": "^6.17.0",
+    "@typescript-eslint/parser": "^6.17.0",
     "eslint-config-prettier": "^9.0.0",
-    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-config-turbo": "^1.11.3",
     "eslint-plugin-only-warn": "^1.1.0",
+    "eslint-plugin-prettier": "^5.0.0",
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-sonarjs": "^0.23.0",
     "eslint-plugin-tailwindcss": "^3.13.0",
     "typescript": "^5.3.3"
   }
