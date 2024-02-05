@@ -1,14 +1,12 @@
 {
   "name": "@bitwyre/eslint-config",
-  "version": "0.0.1",
-  "private": true,
+  "version": "0.0.4",
+  "private": false,
   "main": "./index.js",
   "files": [
-    "library.js",
-    "next.js",
     "index.js"
   ],
-  "devDependencies": {
+  "dependencies": {
     "@typescript-eslint/parser": "^6.17.0",
     "@typescript-eslint/eslint-plugin": "^6.17.0",
     "@types/eslint-config-prettier": "^6.11.0",
