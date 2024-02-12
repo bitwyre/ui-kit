@@ -1,5 +1,4 @@
-import {Button} from "@bitwyre/ui-kit/button";
-import {Card} from "@bitwyre/ui-kit/card";
+import {Button, Card} from "@bitwyre/ui-kit";
 
 const HomePage = () => {
   return (
