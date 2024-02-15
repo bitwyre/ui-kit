@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "files": [
-    "dist"
+    "dist/"
   ],
-  "main": "./dist/index.js",
+  "main": "./index.ts",
   "types": "./dist/index.d.ts",
   "scripts": {
     "lint": "eslint . --max-warnings 0",
@@ -29,7 +29,6 @@
     "eslint": "^8.56.0",
     "postcss": "^8.4.33",
     "react": "^18.2.0",
-    "size-limit": "^8.2.6",
     "standard-version": "^9.5.0",
     "tailwindcss": "^3.4.1",
     "terser": "^5.19.2",
@@ -47,8 +46,26 @@
     "vaul": "^0.9.0"
   },
   "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./*": {
+      "require": "./dist/*/index.js",
+      "import": "./dist/*/index.mjs",
+      "types": "./dist/*/index.d.ts"
+    },
     "./global.css": "./src/styles/global.css",
     "./postcss.config": "./postcss.config.js",
     "./tailwind.config": "./tailwind.config.ts"
+  },
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/index.d.ts"
+      ]
+    }
   }
 }

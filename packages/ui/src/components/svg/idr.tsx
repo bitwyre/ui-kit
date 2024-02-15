@@ -1,7 +1,13 @@
-import * as React from "react";
 import type {SVGProps} from "react";
-const SvgIdr = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" {...props}>
+
+const SvgIdr = (props: SVGProps<SVGSVGElement> & {size?: number | string}) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={props.size ?? 24}
+    height={props.size ?? 24}
+    viewBox="0 0 24 24"
+    fill="none"
+    {...props}>
     <path
       fill="#1275E9"
       d="M23.64 14.903c-1.602 6.428-8.114 10.34-14.544 8.738C2.669 22.038-1.244 15.527.359 9.098S8.473-1.244 14.902.36c6.43 1.603 10.342 8.115 8.739 14.544"
