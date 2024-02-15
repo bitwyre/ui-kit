@@ -1,4 +1,4 @@
-import {Button, Card} from "@bitwyre/ui-kit";
+import {Button, Card, CardDescription, CardHeader, CardTitle} from "@bitwyre/ui-kit";
 
 const HomePage = () => {
   return (
@@ -7,7 +7,10 @@ const HomePage = () => {
       <Button variant="link">This is Button</Button>
       <div className="mt-5 p-4">
         <Card className="p-4">
-          <p>This is Card</p>
+          <CardHeader>
+            <CardTitle>Total Assets</CardTitle>
+            <CardDescription>≈1,000,000.00 USD</CardDescription>
+          </CardHeader>
         </Card>
       </div>
     </div>

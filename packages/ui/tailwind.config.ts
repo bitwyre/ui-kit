@@ -51,6 +51,10 @@ module.exports = {
         card: {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
+          "gradient-foreground": "hsl(var(--card-gradient-foreground))",
+          "gradient-start": "hsl(var(--card-gradient-start))",
+          "gradient-stop": "hsl(var(--card-gradient-stop))",
+          "gradient-border": "hsl(var(--card-gradient-border))",
         },
         bw: {
           "primary-blue-50": "var(--primary-blue-50)",
