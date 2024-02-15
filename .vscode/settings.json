@@ -26,5 +26,6 @@
     "editor.codeActionsOnSave": {
       "source.organizeImports": "explicit"
     }
-  }
+  },
+  "docwriter.style": "Auto-detect"
 }
