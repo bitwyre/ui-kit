@@ -1,31 +1,32 @@
-import {EyeIcon, EyeOffIcon, SearchIcon} from "lucide-react";
-import {
-  useState,
-  type ChangeEvent,
-  type InputHTMLAttributes,
-  type KeyboardEvent,
-} from "react";
+"use client";
 
+import {SearchIcon} from "lucide-react";
+import {type ChangeEvent, type InputHTMLAttributes, type KeyboardEvent} from "react";
 import type {FieldErrors, FieldValues, Path, UseFormRegister} from "react-hook-form";
 import {cn} from "../lib/utils";
 
+/**
+ * Type for input field properties.
+ * @template IP - The type of form field values.
+ */
 type InputProps<IP extends FieldValues = UniversalT> = {
-  label: string;
-  errors: FieldErrors<IP>;
-  customError: string | null;
-  labelclassName: string;
-  isRequired: boolean;
-  isCustomIconDisabled: boolean;
-  withSearchIcon: boolean;
-  customIcon: React.JSX.Element;
-  searchIconSize: number;
-  onClickCustomIcon(): void;
-  typeFlex: "column" | "row";
-  withErrorIcon: boolean;
-  name: keyof IP;
-  withEyeIcon: boolean;
-  register: UseFormRegister<IP>;
-} & InputHTMLAttributes<HTMLInputElement>;
+  label: string; // The label for the input field.
+  errors: FieldErrors<IP>; // The errors associated with the input field.
+  customError: string | null; // Custom error message for the input field.
+  labelclassName: string; // The class name for the label.
+  isRequired: boolean; // Indicates if the input field is required.
+  isCustomIconDisabled: boolean; // Indicates if the custom icon is disabled.
+  withSearchIcon: boolean; // Indicates if the search icon is enabled.
+  customIcon: React.JSX.Element; // The custom icon for the input field.
+  inputChildren: () => React.JSX.Element; // The child elements for the input field component.
+  searchIconSize: number; // The size of the search icon.
+  onClickCustomIcon(): void; // The function to handle custom icon click event.
+  typeFlex: "column" | "row"; // The flex layout type for the input field.
+  withErrorIcon: boolean; // Indicates if the error icon is enabled.
+  name: keyof IP; // The name of the input field.
+  withEyeIcon: boolean; // Indicates if the eye icon is enabled.
+  register: UseFormRegister<IP>; // The registration function for the input field.
+} & InputHTMLAttributes<HTMLInputElement>; // Additional HTML input attributes.
 
 const renderErrors = (
   customError: string,
@@ -45,6 +46,12 @@ const renderErrors = (
   ) : null;
 };
 
+/**
+ * Input field component for forms.
+ * @template T - The type of form field values.
+ * @param {Partial<InputProps<T>>} props - The input field properties.
+ * @returns {JSX.Element} - The rendered input field component.
+ */
 const InputField = <T extends FieldValues>({
   register,
   name,
@@ -58,14 +65,11 @@ const InputField = <T extends FieldValues>({
   className,
   withSearchIcon,
   customIcon,
-  withEyeIcon,
+  inputChildren,
   maxLength,
   customError,
   ...rest
-}: Partial<InputProps<T>>) => {
-  const [inputType, setInputType] = useState(type);
-  const [isInputted, setIsInputted] = useState(false);
-
+}: Partial<InputProps<T>>): JSX.Element => {
   const onKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
     if (type === "number") {
       /**
@@ -81,8 +85,6 @@ const InputField = <T extends FieldValues>({
   };
 
   const onInputValue = (event: ChangeEvent<HTMLInputElement>) => {
-    setIsInputted(true);
-
     if (type === "number") {
       const {value, maxLength} = event.target;
 
@@ -90,11 +92,6 @@ const InputField = <T extends FieldValues>({
         event.target.value = value.slice(0, maxLength);
       }
     }
-  };
-
-  const onShowPassword = () => {
-    if (inputType === "password") setInputType("text");
-    else setInputType("password");
   };
 
   return (
@@ -112,7 +109,7 @@ const InputField = <T extends FieldValues>({
         <div className="relative">
           <input
             id={name}
-            type={inputType}
+            type={type}
             className={cn(className, "outline-none")}
             maxLength={type === "number" ? 12 : maxLength}
             onWheel={(ev) => ev.currentTarget.blur()}
@@ -125,16 +122,6 @@ const InputField = <T extends FieldValues>({
               : {})}
             {...rest}
           />
-
-          {withEyeIcon && isInputted ? (
-            <button
-              type="button"
-              onClick={onShowPassword}
-              className="absolute right-3 top-[49%] -translate-y-1/2 text-bw-gray-500"
-              data-testid="eye-icon">
-              {inputType === "text" ? <EyeOffIcon size={20} /> : <EyeIcon size={19} />}
-            </button>
-          ) : null}
 
           {withSearchIcon ? (
             <div
@@ -151,6 +138,8 @@ const InputField = <T extends FieldValues>({
               {customIcon}
             </div>
           ) : null}
+
+          {inputChildren && inputChildren()}
         </div>
       </fieldset>
       {renderErrors(customError as string, name, errors)}
@@ -158,4 +147,4 @@ const InputField = <T extends FieldValues>({
   );
 };
 
-export default InputField;
+export {InputField};

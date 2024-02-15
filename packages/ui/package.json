@@ -12,7 +12,7 @@
     "generate:comp": "pnpm dlx shadcn-ui@latest add",
     "generate:comp-default": "turbo gen react-component",
     "generate:svg": "pnpm dlx @svgr/cli  --out-dir src/components/svg --index-template index-template.js --typescript -- icons",
-    "build": "pnpm dlx tsup"
+    "build": "rm -rf dist && pnpm dlx tsup"
   },
   "devDependencies": {
     "@bitwyre/eslint-config": "workspace:*",
@@ -30,7 +30,6 @@
     "postcss": "^8.4.33",
     "react": "^18.2.0",
     "react-hook-form": "^7.48.2",
-    "standard-version": "^9.5.0",
     "tailwindcss": "^3.4.1",
     "terser": "^5.19.2",
     "tsup": "^8.0.2",

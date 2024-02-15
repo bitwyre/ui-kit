@@ -1,2 +1,2 @@
+export {default as Idr} from "./Idr";
 export {default as Usd} from "./Usd";
-export {default as Idr} from "./idr";
