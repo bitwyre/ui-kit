@@ -8,9 +8,12 @@
   },
   "dependencies": {
     "@bitwyre/ui-kit": "workspace:*",
+    "@hookform/resolvers": "3.3.2",
     "@ladle/react": "4.0.2",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "zod": "latest",
+    "react-hook-form": "7.48.2"
   },
   "devDependencies": {
     "@types/react": "18.2.46",
