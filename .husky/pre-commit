@@ -1,0 +1,15 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo 'RUNNING Git Hooks'
+
+pnpm lint-staged ||
+  (
+    echo '🔨❌ You have a problem in your code. Please check the code using linter 🔨❌
+     try run pnpm lint, make some changes and try do the commit again.
+     '
+    false
+  )
+
+
+echo '🎉 No error found: committing this now.... ✨🚀🏄‍♂️🍻'

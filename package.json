@@ -9,11 +9,17 @@
     "docs": "turbo run dev --filter=docs",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "publish": "make release"
+    "publish": "make release",
+    "prepare": "husky",
+    "commit": "cz"
   },
   "devDependencies": {
     "@bitwyre/eslint-config": "workspace:*",
     "@bitwyre/typescript-config": "workspace:*",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "prettier": "^3.1.1",
     "turbo": "latest"
   },
@@ -23,5 +29,14 @@
   },
   "dependencies": {
     "@changesets/cli": "^2.27.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "lint-staged": {
+    "**/*.{ts,tsx}": "pnpm lint",
+    "**/*.{js,jsx,ts,tsx,mdx,md,css}": "pnpm format"
   }
 }
