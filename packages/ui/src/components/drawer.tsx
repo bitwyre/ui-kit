@@ -20,14 +20,21 @@ export interface DrawerDescriptionElement
 /**
  * This is Drawer Root, every drawer should be wrapped with this component
  */
-const Drawer = Vaul.Root;
+const Drawer = (props: React.ComponentPropsWithoutRef<typeof Vaul.Root>) => (
+  <Vaul.Root {...props} />
+);
+Drawer.displayName = "Drawer";
 
 /**
  * Optional Trigger button without using `open/closed` state
  */
-const DrawerTrigger = Vaul.Trigger;
+const DrawerTrigger = (props: React.ComponentPropsWithoutRef<typeof Vaul.Trigger>) => (
+  <Vaul.Trigger {...props} />
+);
+DrawerTrigger.displayName = "DrawerTigger";
 
 const DrawerPortal = Vaul.Portal;
+DrawerPortal.displayName = "DrawerPortal";
 
 const DrawerOverlay = React.forwardRef<DrawerOverlayElement, DrawerOverlayProps>(
   ({className, ...props}, ref) => (
@@ -38,6 +45,7 @@ const DrawerOverlay = React.forwardRef<DrawerOverlayElement, DrawerOverlayProps>
     />
   ),
 );
+DrawerOverlay.displayName = Vaul.Overlay.displayName;
 
 /**
  * Drawer content should be wrapped inside this component
@@ -69,6 +77,7 @@ const DrawerContent = React.forwardRef<DrawerContentElement, DrawerContentProps>
     </DrawerPortal>
   ),
 );
+DrawerContent.displayName = Vaul.Content.displayName;
 
 /**
  *
@@ -78,6 +87,7 @@ const DrawerContent = React.forwardRef<DrawerContentElement, DrawerContentProps>
 const DrawerFooter = ({className, ...props}: React.HTMLAttributes<HTMLDivElement>) => (
   <div className={cn("mt-auto flex flex-col gap-2 p-4", className)} {...props} />
 );
+DrawerFooter.displayName = "DrawerFooter";
 
 /**
  *
@@ -87,6 +97,7 @@ const DrawerFooter = ({className, ...props}: React.HTMLAttributes<HTMLDivElement
 const DrawerHeader = ({className, ...props}: React.HTMLAttributes<HTMLDivElement>) => (
   <div className={cn("grid gap-1.5 p-4", className)} {...props} />
 );
+DrawerHeader.displayName = "DrawerHeader";
 
 /**
  * DrawerTitle represent `<h3` element, prefered placement is inside `<DrawerHeader />`
@@ -101,6 +112,7 @@ const DrawerTitle = React.forwardRef<DrawerTitleElement, DrawerTitleProps>(
     />
   ),
 );
+DrawerTitle.displayName = Vaul.Title.displayName;
 
 /**
  * DrawerDescription represent `<p>` element, prefered placemenet is inside `<DrawerHeader />` after `<DrawerTitle />`
@@ -115,6 +127,7 @@ const DrawerDescription = React.forwardRef<
     {...props}
   />
 ));
+DrawerDescription.displayName = Vaul.Description.displayName;
 
 export {
   Drawer,
