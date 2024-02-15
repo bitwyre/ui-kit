@@ -9,8 +9,9 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "lint": "eslint . --max-warnings 0",
-    "generate:comp": "npx shadcn-ui@latest add",
+    "generate:comp": "pnpm dlx shadcn-ui@latest add",
     "generate:comp-default": "turbo gen react-component",
+    "generate:svg": "pnpm dlx @svgr/cli  --out-dir src/components/svg --index-template index-template.js --typescript -- icons",
     "build": "pnpm dlx tsup"
   },
   "devDependencies": {
@@ -18,6 +19,7 @@
     "@bitwyre/typescript-config": "workspace:*",
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
+    "@svgr/cli": "^8.1.0",
     "@turbo/gen": "^1.11.3",
     "@types/eslint": "^8.56.1",
     "@types/node": "^20.10.6",

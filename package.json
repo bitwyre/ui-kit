@@ -14,7 +14,6 @@
     "@bitwyre/eslint-config": "workspace:*",
     "@bitwyre/typescript-config": "workspace:*",
     "prettier": "^3.1.1",
-    "prettier-plugin-tailwindcss": "^0.5.11",
     "turbo": "latest"
   },
   "packageManager": "pnpm@8.9.0",
