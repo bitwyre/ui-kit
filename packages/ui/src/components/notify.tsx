@@ -1,9 +1,12 @@
-const NotifySuccess = () => {
-  return <div>NotifySuccess</div>;
-};
+"use client";
 
-const NotifyError = () => {
-  return <div>NotifyError</div>;
-};
+import * as React from "react";
+import {Toaster, toast} from "sonner";
 
-export {NotifyError, NotifySuccess};
+const notify: typeof toast = toast;
+
+const NotifyToaster = (props: React.ComponentPropsWithoutRef<typeof Toaster>) => (
+  <Toaster position="top-center" {...props} />
+);
+
+export {NotifyToaster, notify};
