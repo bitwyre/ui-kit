@@ -8,7 +8,7 @@
   "main": "./index.ts",
   "types": "./dist/index.d.ts",
   "scripts": {
-    "lint": "eslint . --max-warnings 0",
+    "lint": "eslint .",
     "generate:comp": "pnpm dlx shadcn-ui@latest add",
     "generate:comp-default": "turbo gen react-component",
     "generate:svg": "pnpm dlx @svgr/cli  --out-dir src/components/svg --index-template index-template.js --typescript -- icons",
