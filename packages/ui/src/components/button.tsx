@@ -39,6 +39,13 @@ export interface ButtonProps
   asChild?: boolean;
 }
 
+/**
+ * @returns Element UI for Button.
+ *
+ * @param {ButtonProps} props - Props for Button.
+ * @param asChild - Props for wrap a child for an element.
+ *
+ */
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
   ({className, variant, size, asChild = false, ...props}, ref) => {
     const Comp = asChild ? Slot : "button";
@@ -51,6 +58,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     );
   },
 );
+
 Button.displayName = "Button";
 
 export {Button};

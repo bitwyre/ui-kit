@@ -10,7 +10,8 @@
   "scripts": {
     "lint": "eslint . --max-warnings 0",
     "generate:comp": "npx shadcn-ui@latest add",
-    "generate:comp-default": "turbo gen react-component"
+    "generate:comp-default": "turbo gen react-component",
+    "build": "pnpm dlx tsup"
   },
   "devDependencies": {
     "@bitwyre/eslint-config": "workspace:*",
