@@ -6,6 +6,7 @@
     "dev": "turbo dev",
     "build:ui-kit": "turbo build --filter=ui-kit",
     "playgrounds": "turbo run dev --filter=web",
+    "docs": "turbo run dev --filter=docs",
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "publish": "make release"
