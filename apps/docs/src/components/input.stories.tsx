@@ -1,4 +1,4 @@
-import {InputField} from "@bitwyre/ui-kit";
+import {Button, InputField} from "@bitwyre/ui-kit";
 import {zodResolver} from "@hookform/resolvers/zod";
 import {useState} from "react";
 import {useForm} from "react-hook-form";
@@ -24,7 +24,7 @@ export const FormComponent = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-3">
         <InputField
           register={register}
           name="email"
@@ -40,14 +40,24 @@ export const FormComponent = () => {
           type="password"
           className="w-full border"
           errors={errors}
-          inputChildren={() => <p className="absolute right-3 top-0">Eye</p>}
+          inputChildren={() => (
+            <button
+              type="button"
+              className="outline-none absolute right-3 top-0"
+              onClick={() => alert("You click eye")}>
+              Eye
+            </button>
+          )}
           label="Password"
           placeholder="Enter your Password"
         />
 
-        <button type="submit">Submit</button>
+        <Button type="submit">Submit</Button>
       </form>
-      {data && <pre>{JSON.stringify(data, null, 2)}</pre>}
+
+      <div className="mt-3">
+        {data && <pre>data: {JSON.stringify(data, null, 2)}</pre>}
+      </div>
     </>
   );
 };
