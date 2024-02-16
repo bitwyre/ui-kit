@@ -3,7 +3,6 @@ import {Button} from "@bitwyre/ui-kit";
 const ComponentPrimaryButton = () => (
   <Button variant="primary">This is button Primary</Button>
 );
-
 const ComponentSecondaryButton = () => (
   <Button variant="secondary">This is button secondary</Button>
 );
@@ -49,7 +48,7 @@ const ComponentIconCircleButton = () => (
 );
 
 export const MainComponent = () => (
-  <div className="flex gap-2 flex-wrap">
+  <div className="flex gap-x-3 gap-y-5 flex-wrap">
     <ComponentPrimaryButton />
     <ComponentSecondaryButton />
     <ComponentSubtleButton />
@@ -62,5 +61,9 @@ export const MainComponent = () => (
     <ComponentIconDefaultButton />
     <ComponentIconGhostButton />
     <ComponentIconCircleButton />
+
+    <Button asChild variant="outline" className="text-black">
+      <button>me as Child</button>
+    </Button>
   </div>
 );

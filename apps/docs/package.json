@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@bitwyre/ui-kit": "workspace:*",
+    "@bitwyre/icons": "workspace:*",
     "@hookform/resolvers": "3.3.2",
     "@ladle/react": "4.0.2",
     "react": "latest",

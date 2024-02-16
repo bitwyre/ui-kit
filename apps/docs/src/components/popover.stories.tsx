@@ -58,7 +58,9 @@ export const PopoverComponent = () => {
       </div>
       <div className="flex items-center justify-center gap-2 pt-4">
         <Popover>
-          <PopoverTrigger>Vanilla Trigger</PopoverTrigger>
+          <PopoverTrigger className="bg-bw-navy-500 rounded-md p-2 text-white outline-none">
+            Vanilla Trigger
+          </PopoverTrigger>
 
           <PopoverContent align="start" className="p-4 space-y-2">
             <p>

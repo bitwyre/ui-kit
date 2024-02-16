@@ -5,6 +5,7 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "build:ui-kit": "turbo build --filter=ui-kit",
+    "build:icons": "turbo build --filter=icons",
     "playgrounds": "turbo run dev --filter=web",
     "docs": "turbo run dev --filter=docs",
     "lint": "turbo lint --",
