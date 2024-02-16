@@ -10,7 +10,6 @@
     "lint": "turbo lint --",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "publish": "make release",
-    "prepare": "husky",
     "commit": "cz"
   },
   "devDependencies": {
