@@ -21,9 +21,10 @@ const buttonVariants = cva(baseClass, {
       subtle: "bg-bw-navy-500 text-bw-cyan-blue-50 hover:bg-bw-navy-400",
       destructive: "bg-bw-red-800 text-bw-red-50 hover:bg-bw-red-900",
       outline:
-        "border border-bw-navy-600 bg-bw-navy-950 text-bw-cyan-blue-50 hover:border-bw-navy-500",
+        "border border-bw-navy-600 text-bw-cyan-blue-50 hover:border-bw-navy-500",
       ghost: "text-bw-cyan-blue-50 hover:bg-bw-navy-500",
-      link: "text-bw-cyan-blue-50 underline hover:no-underline",
+      link: "text-black underline hover:no-underline",
+      "gradient-blue": "bg-custom-gradient text-white",
     },
     size: {
       default: "h-10 px-4 py-2",
@@ -64,6 +65,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       size,
       asChild = false,
       isButtonLoading,
+      type = "button",
       textButtonLoading,
       ...props
     },
@@ -72,6 +74,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const Comp = asChild ? Slot : "button";
     return (
       <Comp
+        type={type}
         className={cn(buttonVariants({variant, size, className}))}
         ref={ref}
         {...props}>

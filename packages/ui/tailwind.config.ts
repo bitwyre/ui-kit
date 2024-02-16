@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+//@ts-expect-error no types required
 module.exports = {
   darkMode: ["class"],
   content: [
@@ -18,6 +19,9 @@ module.exports = {
       },
     },
     extend: {
+      backgroundImage: {
+        "custom-gradient": "linear-gradient(90deg, #3B1CEA 0%, #0EA8E5 100%)",
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -44,6 +48,7 @@ module.exports = {
           DEFAULT: "hsl(var(--accent))",
           foreground: "hsl(var(--accent-foreground))",
         },
+
         popover: {
           DEFAULT: "hsl(var(--popover))",
           foreground: "hsl(var(--popover-foreground))",
@@ -164,5 +169,6 @@ module.exports = {
       },
     },
   },
+  //@ts-expect-error no types required
   plugins: [require("tailwindcss-animate")],
 };

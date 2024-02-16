@@ -1,6 +1,6 @@
 import {Button, NotifyToaster, notify} from "@bitwyre/ui-kit";
 
-export const Common = () => {
+export const MainComponent = () => {
   const onSuccess = () => notify.success("Success!");
   const onWarning = () => notify.warning("Error!");
   const onError = () => notify.error("Error!");
@@ -9,9 +9,15 @@ export const Common = () => {
   return (
     <>
       <div className="flex gap-1.5">
-        <Button onClick={onSuccess}>Success</Button>
-        <Button onClick={onWarning}>Warning</Button>
-        <Button onClick={onLoading}>Loading</Button>
+        <Button onClick={onSuccess} variant="subtle">
+          Success
+        </Button>
+        <Button onClick={onWarning} variant="subtle">
+          Warning
+        </Button>
+        <Button onClick={onLoading} variant="subtle">
+          Loading
+        </Button>
         <Button onClick={onError} variant="destructive">
           Error
         </Button>
