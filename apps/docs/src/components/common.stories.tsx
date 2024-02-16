@@ -7,7 +7,7 @@ const data = [
   {name: "Hansen", age: 27},
 ];
 
-export const Box_ = () => (
+export const BoxComponent = () => (
   <Box as="header">
     <p>
       I rendered inside a box rendered as <code>header</code>
@@ -15,7 +15,7 @@ export const Box_ = () => (
   </Box>
 );
 
-export const For_ = () => (
+export const ForComponent = () => (
   <>
     <p>
       <code>For</code> Component
@@ -33,7 +33,7 @@ export const For_ = () => (
   </>
 );
 
-export const ShowIf_ = () => {
+export const ShowIfComponent = () => {
   const [bool, setBool] = React.useState(true);
   const toggleBool = () => setBool((prev) => !prev);
 
