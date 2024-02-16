@@ -52,7 +52,9 @@ export const FormComponent = () => {
           placeholder="Enter your Password"
         />
 
-        <Button type="submit">Submit</Button>
+        <Button type="submit" className="bg-black text-white">
+          Submit
+        </Button>
       </form>
 
       <div className="mt-3">

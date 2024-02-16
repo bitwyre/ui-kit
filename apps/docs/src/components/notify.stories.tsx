@@ -1,6 +1,6 @@
 import {Button, NotifyToaster, notify} from "@bitwyre/ui-kit";
 
-export const MainComponent = () => {
+export const NotifyComponent = () => {
   const onSuccess = () => notify.success("Success!");
   const onWarning = () => notify.warning("Error!");
   const onError = () => notify.error("Error!");
