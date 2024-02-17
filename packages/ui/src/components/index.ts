@@ -7,3 +7,5 @@ export * from "./input";
 export * from "./notify";
 export * from "./popover";
 export * from "./aspect-ratio";
+export * from "./label";
+export * from "./form";

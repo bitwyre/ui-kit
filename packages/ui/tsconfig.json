@@ -3,9 +3,8 @@
   "compilerOptions": {
     "outDir": "dist",
     "baseUrl": ".",
-    "jsx": "react-jsx",
     "typeRoots": ["types"]
   },
-  "include": ["src", "../icons/src/icons"],
+  "include": ["src"],
   "exclude": ["node_modules", "dist"]
 }
