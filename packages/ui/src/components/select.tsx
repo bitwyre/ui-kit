@@ -6,12 +6,26 @@ import {Check, ChevronDown, ChevronUp} from "lucide-react";
 
 import {cn} from "../lib/utils";
 
+/**
+ * Root component Provider for a custom select element.
+ * @remarks This component is used as the root for building a custom select dropdown.
+ */
 const Select = SelectPrimitive.Root;
 
+/**
+ * Component for grouping options within a select dropdown.
+ */
 const SelectGroup = SelectPrimitive.Group;
 
+/**
+ * Component for rendering the selected value in a select dropdown.
+ */
 const SelectValue = SelectPrimitive.Value;
 
+/**
+ * Component representing the trigger button of a select dropdown.
+ * @remarks This component is used to toggle the visibility of the dropdown options.
+ */
 const SelectTrigger = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Trigger>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger>
@@ -31,6 +45,10 @@ const SelectTrigger = React.forwardRef<
 ));
 SelectTrigger.displayName = SelectPrimitive.Trigger.displayName;
 
+/**
+ * Component representing the scroll up button within the dropdown content.
+ * @remarks This button allows scrolling up through the dropdown options.
+ */
 const SelectScrollUpButton = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.ScrollUpButton>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.ScrollUpButton>
@@ -44,6 +62,10 @@ const SelectScrollUpButton = React.forwardRef<
 ));
 SelectScrollUpButton.displayName = SelectPrimitive.ScrollUpButton.displayName;
 
+/**
+ * Component representing the scroll down button within the dropdown content.
+ * @remarks This button allows scrolling down through the dropdown options.
+ */
 const SelectScrollDownButton = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.ScrollDownButton>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.ScrollDownButton>
@@ -57,6 +79,10 @@ const SelectScrollDownButton = React.forwardRef<
 ));
 SelectScrollDownButton.displayName = SelectPrimitive.ScrollDownButton.displayName;
 
+/**
+ * Component representing the content area of the select dropdown.
+ * @remarks This component wraps the options and handles scrolling within the dropdown.
+ */
 const SelectContent = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Content>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Content>
@@ -87,6 +113,10 @@ const SelectContent = React.forwardRef<
 ));
 SelectContent.displayName = SelectPrimitive.Content.displayName;
 
+/**
+ * Component representing the label of the select dropdown.
+ * @remarks This component provides a label for the dropdown, typically displayed above it.
+ */
 const SelectLabel = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Label>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Label>
@@ -99,6 +129,10 @@ const SelectLabel = React.forwardRef<
 ));
 SelectLabel.displayName = SelectPrimitive.Label.displayName;
 
+/**
+ * Component representing an individual selectable item within the dropdown.
+ * @remarks This component represents an option that can be selected within the dropdown.
+ */
 const SelectItem = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Item>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Item>
@@ -121,6 +155,10 @@ const SelectItem = React.forwardRef<
 ));
 SelectItem.displayName = SelectPrimitive.Item.displayName;
 
+/**
+ * Component representing a separator between groups or items within the dropdown.
+ * @remarks This component is used to visually separate groups or items within the dropdown.
+ */
 const SelectSeparator = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Separator>,
   React.ComponentPropsWithoutRef<typeof SelectPrimitive.Separator>
