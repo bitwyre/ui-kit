@@ -5,11 +5,8 @@
   "main": "./src/index.ts",
   "types": "./dist/index.d.ts",
   "module": "./dist/index.mjs",
-  "files": [
-    "base.json"
-  ],
   "scripts": {
-    "generate:svg": "pnpm dlx @svgr/cli  --out-dir src/components/icons --index-template index-template.js --typescript -- currency-icons",
+    "generate:svg": "pnpm dlx @svgr/cli  --out-dir src/icons --index-template index-template.js --typescript -- currency-icons",
     "build": "rm -rf dist && pnpm dlx tsup"
   },
   "license": "MIT",

@@ -10,7 +10,6 @@
   "module": "./dist/index.mjs",
   "scripts": {
     "lint": "eslint .",
-    "generate:comp": "pnpm dlx shadcn-ui@latest add",
     "generate:comp-default": "turbo gen react-component",
     "build": "rm -rf dist && pnpm dlx tsup"
   },
@@ -32,6 +31,7 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
+    "@radix-ui/react-dropdown-menu": "^2.0.6",
     "@radix-ui/react-popover": "^1.0.7",
     "@radix-ui/react-slot": "^1.0.2",
     "class-variance-authority": "^0.7.0",
