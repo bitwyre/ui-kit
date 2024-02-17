@@ -17,7 +17,7 @@ const cardVariants = cva("rounded-lg", {
   defaultVariants: {variant: "default"},
 });
 
-export interface CardProps
+interface CardProps
   extends React.ComponentProps<"div">,
     VariantProps<typeof cardVariants> {
   asChild?: boolean;

@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-export interface ShowIfProps {
+interface ShowIfProps {
   condition: boolean;
   children: React.ReactNode;
   fallback?: React.ReactNode;
@@ -19,9 +19,9 @@ export interface ShowIfProps {
 const ShowIf = ({fallback = null, ...props}: ShowIfProps) =>
   props.condition ? props.children : fallback;
 
-export interface ForProps<TData> {
+interface ForProps<TData> {
   each: Array<TData>;
-  children: (eachItem: TData, i: number) => JSX.Element;
+  children: (eachItem: TData, index: number) => JSX.Element;
 }
 
 /**
@@ -39,7 +39,7 @@ const For = <TData,>(props: ForProps<TData>) => {
   );
 };
 
-export type BoxProps<TElement extends React.ElementType = "div"> = {
+type BoxProps<TElement extends React.ElementType = "div"> = {
   as?: TElement;
   children?: React.ReactNode;
   defaultClassName?: string;

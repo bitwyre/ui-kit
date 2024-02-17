@@ -4,20 +4,19 @@ import * as React from "react";
 import {Drawer as Vaul} from "vaul";
 import {cn} from "../lib/utils";
 
-export interface DrawerOverlayProps
+interface DrawerOverlayProps
   extends React.ComponentPropsWithoutRef<typeof Vaul.Overlay> {}
-export interface DrawerOverlayElement extends React.ElementRef<typeof Vaul.Overlay> {}
+interface DrawerOverlayElement extends React.ElementRef<typeof Vaul.Overlay> {}
 
-export interface DrawerContentProps extends React.ComponentProps<typeof Vaul.Content> {}
-export interface DrawerContentElement extends React.ElementRef<typeof Vaul.Content> {}
+interface DrawerContentProps extends React.ComponentProps<typeof Vaul.Content> {}
+interface DrawerContentElement extends React.ElementRef<typeof Vaul.Content> {}
 
-export interface DrawerTitleProps extends React.ComponentProps<typeof Vaul.Title> {}
-export interface DrawerTitleElement extends React.ElementRef<typeof Vaul.Title> {}
+interface DrawerTitleProps extends React.ComponentProps<typeof Vaul.Title> {}
+interface DrawerTitleElement extends React.ElementRef<typeof Vaul.Title> {}
 
-export interface DrawerDescriptionProps
+interface DrawerDescriptionProps
   extends React.ComponentProps<typeof Vaul.Description> {}
-export interface DrawerDescriptionElement
-  extends React.ElementRef<typeof Vaul.Description> {}
+interface DrawerDescriptionElement extends React.ElementRef<typeof Vaul.Description> {}
 
 /**
  * This is Drawer Root, every drawer should be wrapped with this component

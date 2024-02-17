@@ -3,7 +3,7 @@ import {Button, Popover, PopoverContent, PopoverTrigger} from "@bitwyre/ui-kit";
 export const PopoverComponent = () => {
   return (
     <>
-      <p className="mb-1">Popoover with position</p>
+      <h1 className="mb-3 text-2xl">Popoover with position</h1>
       <div className="flex items-center justify-center gap-2">
         <Popover>
           <PopoverTrigger asChild>

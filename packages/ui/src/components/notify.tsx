@@ -1,12 +1,13 @@
 "use client";
 
 import * as React from "react";
-import {Toaster, toast} from "sonner";
+import {Toaster} from "sonner";
 
-const notify: typeof toast = toast;
-
+/**
+ @description this component is Provider Component that for calling a notifications in root element
+*/
 const NotifyToaster = (props: React.ComponentPropsWithoutRef<typeof Toaster>) => (
   <Toaster position="top-center" {...props} />
 );
 
-export {NotifyToaster, notify};
+export {NotifyToaster};
