@@ -6,3 +6,4 @@ export * from "./dropdown-menu";
 export * from "./input";
 export * from "./notify";
 export * from "./popover";
+export * from "./aspect-ratio";
