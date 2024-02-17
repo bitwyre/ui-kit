@@ -1,7 +1,12 @@
 "use client";
 
-import {SearchIcon} from "lucide-react";
-import {type ChangeEvent, type InputHTMLAttributes, type KeyboardEvent} from "react";
+import {SearchIcon, EyeOffIcon, EyeIcon} from "lucide-react";
+import {
+  useState,
+  type ChangeEvent,
+  type InputHTMLAttributes,
+  type KeyboardEvent,
+} from "react";
 import type {FieldErrors, FieldValues, Path, UseFormRegister} from "react-hook-form";
 import {cn} from "../lib/utils";
 
@@ -64,12 +69,16 @@ const InputField = <T extends FieldValues>({
   searchIconSize,
   className,
   withSearchIcon,
-  customIcon,
   inputChildren,
+  customIcon,
+  withEyeIcon,
   maxLength,
   customError,
   ...rest
 }: Partial<InputProps<T>>): JSX.Element => {
+  const [inputType, setInputType] = useState(type);
+  const [isInputted, setIsInputted] = useState(false);
+
   const onKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
     if (type === "number") {
       /**
@@ -85,6 +94,8 @@ const InputField = <T extends FieldValues>({
   };
 
   const onInputValue = (event: ChangeEvent<HTMLInputElement>) => {
+    setIsInputted(true);
+
     if (type === "number") {
       const {value, maxLength} = event.target;
 
@@ -92,6 +103,11 @@ const InputField = <T extends FieldValues>({
         event.target.value = value.slice(0, maxLength);
       }
     }
+  };
+
+  const onShowPassword = () => {
+    if (inputType === "password") setInputType("text");
+    else setInputType("password");
   };
 
   return (
@@ -109,7 +125,7 @@ const InputField = <T extends FieldValues>({
         <div className="relative">
           <input
             id={name}
-            type={type}
+            type={inputType}
             className={cn(className, "outline-none")}
             maxLength={type === "number" ? 12 : maxLength}
             onWheel={(ev) => ev.currentTarget.blur()}
@@ -122,6 +138,16 @@ const InputField = <T extends FieldValues>({
               : {})}
             {...rest}
           />
+
+          {withEyeIcon && isInputted ? (
+            <button
+              type="button"
+              onClick={onShowPassword}
+              className="absolute right-3 top-[49%] -translate-y-1/2 text-bw-gray-500"
+              data-testid="eye-icon">
+              {inputType === "text" ? <EyeOffIcon size={20} /> : <EyeIcon size={19} />}
+            </button>
+          ) : null}
 
           {withSearchIcon ? (
             <div

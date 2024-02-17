@@ -9,7 +9,7 @@ const Validation = z.object({
   password: z.string().min(1, "Password must not be empty"),
 });
 
-export const FormComponent = () => {
+export const InputComponent = () => {
   const [data, setData] = useState<Record<string, any> | null>(null);
 
   const {
@@ -28,7 +28,7 @@ export const FormComponent = () => {
         <InputField
           register={register}
           name="email"
-          className="w-full border"
+          className="px-3 py-2 w-full border"
           errors={errors}
           label="Email"
           placeholder="Enter your email"
@@ -38,16 +38,9 @@ export const FormComponent = () => {
           register={register}
           name="password"
           type="password"
-          className="w-full border"
+          className="px-3 py-2 w-full border"
           errors={errors}
-          inputChildren={() => (
-            <button
-              type="button"
-              className="outline-none absolute right-3 top-0"
-              onClick={() => alert("You click eye")}>
-              Eye
-            </button>
-          )}
+          withEyeIcon
           label="Password"
           placeholder="Enter your Password"
         />

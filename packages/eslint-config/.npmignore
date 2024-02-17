@@ -128,18 +128,3 @@ _.msp
 # Cache
 
 .eslintcache
-
-# Utility
-
-src/
-.eslintrc.cjs
-.prettierrc.cjs
-commitlint.config.cjs
-jest.config.js
-tsup.config.ts
-node_modules
-tsconfig.json
-.gitignore
-.eslintignore
-.husky
-rollup.config.ts

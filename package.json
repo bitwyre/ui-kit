@@ -7,7 +7,7 @@
     "build:ui-kit": "turbo build --filter=ui-kit",
     "build:icons": "turbo build --filter=icons",
     "playgrounds": "turbo run dev --filter=web",
-    "docs": "turbo run dev --filter=docs",
+    "ui:docs": "turbo run dev --filter=ui-docs",
     "lint": "turbo lint --",
     "format": "prettier --write \"**/*.{ts,tsx,md}\"",
     "publish": "make release",
