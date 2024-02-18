@@ -6,6 +6,7 @@ import {
   SelectItem,
   SelectLabel,
   cn,
+  For,
   SelectTrigger,
   SelectValue,
 } from "@bitwyre/ui-kit";
@@ -31,11 +32,13 @@ const WithoutRHFComponent = () => {
       <SelectContent>
         <SelectGroup>
           <SelectLabel>Fruits</SelectLabel>
-          {fruitLists.map((item) => (
-            <SelectItem value={item.name} key={item.name}>
-              <p>{item.name}</p>
-            </SelectItem>
-          ))}
+          <For each={fruitLists}>
+            {(item) => (
+              <SelectItem value={item.name} key={item.name}>
+                <p>{item.name}</p>
+              </SelectItem>
+            )}
+          </For>
         </SelectGroup>
       </SelectContent>
     </Select>
@@ -71,11 +74,13 @@ const WithRHFComponent = () => {
         <SelectContent>
           <SelectGroup>
             <SelectLabel>Fruits</SelectLabel>
-            {fruitLists.map((item) => (
-              <SelectItem value={item.name} key={item.name}>
-                <p>{item.name}</p>
-              </SelectItem>
-            ))}
+            <For each={fruitLists}>
+              {(item) => (
+                <SelectItem value={item.name} key={item.name}>
+                  <p>{item.name}</p>
+                </SelectItem>
+              )}
+            </For>
           </SelectGroup>
         </SelectContent>
       </Select>
