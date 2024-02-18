@@ -14,8 +14,12 @@
     "zod": "latest"
   },
   "devDependencies": {
+    "@nextui-org/skeleton": "latest",
+    "@nextui-org/slider": "latest",
+    "@nextui-org/theme": "2.1.17",
     "@types/react": "18.2.46",
     "autoprefixer": "10.4.17",
+    "framer-motion": "10.16.16",
     "postcss": "8.4.33",
     "typescript": "5.3.3",
     "tailwindcss": "3.4.1"
