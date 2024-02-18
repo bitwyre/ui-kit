@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-//@ts-expect-error no types required
+// @ts-ignore
 module.exports = {
   darkMode: ["class"],
   content: [
@@ -169,6 +169,8 @@ module.exports = {
       },
     },
   },
-  //@ts-expect-error no types required
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    //@ts-ignore
+    require("tailwindcss-animate"),
+  ],
 };
