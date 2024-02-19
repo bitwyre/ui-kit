@@ -4,6 +4,17 @@ import {X} from "lucide-react";
 import {Fragment, PropsWithChildren} from "react";
 import {cn} from "../lib/utils";
 
+/**
+ * Popup component that displays a dialog box.
+ * @returns Element UI for Popup
+ * @param isOpen - Determines if the popup is open or closed.
+ * @param closeModal - Function to close the popup.
+ * @param children - The content of the popup.
+ * @param className - Additional CSS classes for styling.
+ * @param size - Size variant of the popup {"lg" | "md" | "xl" | "sm"}.
+ *
+ */
+
 export const Popup = ({
   isOpen,
   closeModal,
