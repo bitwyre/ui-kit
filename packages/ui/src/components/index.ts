@@ -8,6 +8,7 @@ export * from "./dropdown-menu";
 export * from "./form";
 export * from "./input";
 export * from "./label";
+export * from "./navigation-menu";
 export * from "./notify";
 export * from "./pagination";
 export * from "./popover";
