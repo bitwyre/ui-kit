@@ -37,6 +37,12 @@ DrawerTrigger.displayName = "DrawerTigger";
 const DrawerPortal = Vaul.Portal;
 DrawerPortal.displayName = "DrawerPortal";
 
+/**
+ * Optional Trigger button without using `open/closed` state to close the drawer.
+ */
+const DrawerClose = Vaul.Close;
+DrawerClose.displayName = "DrawerClose";
+
 const DrawerOverlay = React.forwardRef<DrawerOverlayElement, DrawerOverlayProps>(
   ({className, ...props}, ref) => (
     <Vaul.Overlay
@@ -132,6 +138,7 @@ DrawerDescription.displayName = Vaul.Description.displayName;
 
 export {
   Drawer,
+  DrawerClose,
   DrawerContent,
   DrawerDescription,
   DrawerFooter,
