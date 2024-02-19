@@ -3,17 +3,14 @@ import ReactPaginate, {ReactPaginateProps} from "react-paginate";
 import {useMediaQuery} from "src/hooks/useMediaQuery";
 import {cn} from "../lib/utils";
 
-const BUTTON_MAIN_STYLE = "w-[35px] h-[35px] rounded-md hover:bg-[#2a3138] text-center";
-const BUTTON_TOOL_STYLE = "bg-[#293137] rounded-md p-1";
-
 const PreviousButton = () => (
   <button
+    className="grid h-10 w-10 place-items-center text-white"
     type="button"
     id="button-prev"
-    title="buttonPrevious"
-    className={BUTTON_TOOL_STYLE}>
+    title="buttonPrevious">
     <svg
-      fill="white"
+      fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -25,12 +22,12 @@ const PreviousButton = () => (
 
 const NextButton = () => (
   <button
+    className="grid h-10 w-10 place-items-center text-white"
     type="button"
     id="button-next"
-    title="buttonNext"
-    className={BUTTON_TOOL_STYLE}>
+    title="buttonNext">
     <svg
-      fill="white"
+      fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
       width="24"
       height="24"
@@ -77,15 +74,25 @@ export const Pagination = memo(
         breakLabel=".."
         marginPagesDisplayed={isMobile ? 1 : 2}
         pageRangeDisplayed={1}
-        containerClassName="flex items-center space-x-4 xsm:space-x-3 sm:space-x-4"
-        pageLinkClassName="w-full h-full flex items-center justify-center"
-        activeClassName="bg-[#2a3138] rounded-md text-white"
+        pageLinkClassName="w-full h-full grid place-items-center select-none"
         {...props}
         forcePage={props.activePage}
-        breakClassName={cn(BUTTON_MAIN_STYLE, props.breakClassName)}
+        breakLinkClassName={cn(
+          "grid place-items-center w-10 h-10 select-none text-white",
+          props.breakLinkClassName,
+        )}
+        activeClassName={cn(
+          "bg-primary-400 !text-white transition",
+          props.activeClassName,
+        )}
+        containerClassName={cn(
+          "flex items-center max-w-max rounded-md overflow-x-hidden border border-bw-gray-800 bg-bw-gray-900",
+          "divide-x divide-bw-gray-800",
+          props.containerClassName,
+        )}
+        breakClassName={cn(props.breakClassName)}
         pageClassName={cn(
-          BUTTON_MAIN_STYLE,
-          "text-white outline-none cursor-pointer",
+          "w-10 h-10 rounded-none text-white outline-none cursor-pointer",
           props.pageClassName,
         )}
       />
