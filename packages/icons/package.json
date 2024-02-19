@@ -1,7 +1,7 @@
 {
   "name": "@bitwyre/icons",
-  "version": "0.0.0",
-  "private": true,
+  "version": "0.1.0",
+  "private": false,
   "main": "./src/index.ts",
   "types": "./dist/index.d.ts",
   "module": "./dist/index.mjs",
