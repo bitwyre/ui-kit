@@ -16,3 +16,4 @@ export * from "./popup";
 export * from "./select";
 export * from "./sheet";
 export * from "./table";
+export * from "./tabs";
