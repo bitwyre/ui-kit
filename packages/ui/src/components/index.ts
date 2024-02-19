@@ -1,3 +1,4 @@
+export * from "./accordion";
 export * from "./aspect-ratio";
 export * from "./button";
 export * from "./card";
@@ -10,5 +11,6 @@ export * from "./label";
 export * from "./notify";
 export * from "./pagination";
 export * from "./popover";
+export * from "./popup";
 export * from "./select";
 export * from "./sheet";
