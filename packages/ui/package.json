@@ -43,6 +43,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "framer-motion": "10.16.16",
+    "cmdk": "^0.2.1",
     "lucide-react": "^0.314.0",
     "react": "^18.2.0",
     "react-hook-form": "^7.48.2",
