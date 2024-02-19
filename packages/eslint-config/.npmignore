@@ -30,6 +30,8 @@ dist
 build/Release
 Makefile
 
+node_modules
+
 # Dependency directories
 
 jspm_packages/

@@ -37,7 +37,7 @@ const NextButton = () => (
   </button>
 );
 
-export interface PaginationProps extends Omit<ReactPaginateProps, "forecePage"> {
+interface PaginationProps extends Omit<ReactPaginateProps, "forcePage"> {
   activePage: number;
 }
 

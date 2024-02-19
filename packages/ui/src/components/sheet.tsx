@@ -2,7 +2,6 @@ import * as SheetPrimitive from "@radix-ui/react-dialog";
 import {cva, type VariantProps} from "class-variance-authority";
 import {X} from "lucide-react";
 import * as React from "react";
-
 import {cn} from "../lib/utils";
 
 /**
@@ -187,7 +186,7 @@ SheetContent.displayName = SheetPrimitive.Content.displayName;
 
 /**
  * SheetHeader will render as div component, common use case is to wrap `<SheetTitle />` and `<SheetDescription />` inside this component
- * @param param0 optional `div` props
+ * @param param optional `div` props
  * @returns `<SheetHeader />` wrapper
  */
 const SheetHeader = ({className, ...props}: React.HTMLAttributes<HTMLDivElement>) => (
@@ -200,7 +199,7 @@ SheetHeader.displayName = "SheetHeader";
 
 /**
  * SheetFooter will render as div component, common use case is to wrap `<SheetClose />` inside this component, by default render at the bottom of the sheet if placed inside `<SheetContent />`
- * @param param0 optional `div` props
+ * @param param optional `div` props
  * @returns `<SheetFooter />` wrapper
  */
 const SheetFooter = ({className, ...props}: React.HTMLAttributes<HTMLDivElement>) => (
@@ -214,6 +213,9 @@ const SheetFooter = ({className, ...props}: React.HTMLAttributes<HTMLDivElement>
 );
 SheetFooter.displayName = "SheetFooter";
 
+/**
+ * SheetTitle will render as div component, common use case is to wrap `<SheetTitle />` inside this component
+ */
 const SheetTitle = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Title>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Title>
@@ -226,6 +228,9 @@ const SheetTitle = React.forwardRef<
 ));
 SheetTitle.displayName = SheetPrimitive.Title.displayName;
 
+/**
+ * SheetDescription will render as div component, common use case is to wrap `<SheetDescription />` inside this component
+ */
 const SheetDescription = React.forwardRef<
   React.ElementRef<typeof SheetPrimitive.Description>,
   React.ComponentPropsWithoutRef<typeof SheetPrimitive.Description>

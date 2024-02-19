@@ -23,6 +23,12 @@ interface CardProps
   asChild?: boolean;
 }
 
+/**
+ * A simple card component.
+ * @param props - Props for the Card component.
+ * @param ref - Forwarded ref for the Card component.
+ * @returns A Card component.
+ */
 const Card = React.forwardRef<HTMLDivElement, CardProps>(
   ({className, variant, ...props}, ref) => (
     <div ref={ref} className={cn(cardVariants({variant, className}))} {...props} />
@@ -30,6 +36,12 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
 );
 Card.displayName = "Card";
 
+/**
+ * A header component for the Card.
+ * @param props - Props for the CardHeader component.
+ * @param ref - Forwarded ref for the CardHeader component.
+ * @returns A CardHeader component.
+ */
 const CardHeader = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
@@ -42,6 +54,12 @@ const CardHeader = React.forwardRef<
 ));
 CardHeader.displayName = "CardHeader";
 
+/**
+ * A title component for the Card.
+ * @param props - Props for the CardTitle component.
+ * @param ref - Forwarded ref for the CardTitle component.
+ * @returns A CardTitle component.
+ */
 const CardTitle = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLHeadingElement>
@@ -55,6 +73,12 @@ const CardTitle = React.forwardRef<
 ));
 CardTitle.displayName = "CardTitle";
 
+/**
+ * A description component for the Card.
+ * @param props - Props for the CardDescription component.
+ * @param ref - Forwarded ref for the CardDescription component.
+ * @returns A CardDescription component.
+ */
 const CardDescription = React.forwardRef<
   HTMLParagraphElement,
   React.HTMLAttributes<HTMLParagraphElement>
@@ -67,6 +91,12 @@ const CardDescription = React.forwardRef<
 ));
 CardDescription.displayName = "CardDescription";
 
+/**
+ * A content component for the Card.
+ * @param props - Props for the CardContent component.
+ * @param ref - Forwarded ref for the CardContent component.
+ * @returns A CardContent component.
+ */
 const CardContent = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
@@ -75,6 +105,12 @@ const CardContent = React.forwardRef<
 ));
 CardContent.displayName = "CardContent";
 
+/**
+ * A footer component for the Card.
+ * @param props - Props for the CardFooter component.
+ * @param ref - Forwarded ref for the CardFooter component.
+ * @returns A CardFooter component.
+ */
 const CardFooter = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>

@@ -88,7 +88,7 @@ DrawerContent.displayName = Vaul.Content.displayName;
 
 /**
  *
- * @param param0 HTMLDiv Attributes
+ * @param param HTMLDiv Attributes
  * @returns Drawer Footer, should be placed inside `<DrawerContent />`
  */
 const DrawerFooter = ({className, ...props}: React.HTMLAttributes<HTMLDivElement>) => (
@@ -98,7 +98,7 @@ DrawerFooter.displayName = "DrawerFooter";
 
 /**
  *
- * @param param0 HTMLDiv Attributes
+ * @param param HTMLDiv Attributes
  * @returns Drawer Header, should be placed inside `<DrawerContent />`
  */
 const DrawerHeader = ({className, ...props}: React.HTMLAttributes<HTMLDivElement>) => (

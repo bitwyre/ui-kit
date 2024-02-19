@@ -31,7 +31,7 @@ module.exports = {
 - eslint-plugin-tailwindcss : to rule tailwind classes
 - eslint-plugin-sonarjs : Automate rules for typescript with sonarlint and eslint parser
 
-Please also for sorting classes tailwind you need to install prettier plugin for sort package by
+Please also for sorting classes tailwind you need to install prettier plugin tailwind css for sort classname package by
 
 ```bash
 npm install prettier-plugin-tailwindcss -D
