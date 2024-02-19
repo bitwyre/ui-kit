@@ -7,6 +7,6 @@ test:
 	yarn run test
 
 release:
-	npx changeset version && npx changeset publish
+	pnpm dlx changeset version && npx changeset publish
 
 publish: test build release
