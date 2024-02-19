@@ -1,3 +1,5 @@
+"use client";
+
 import {Dialog, Transition} from "@headlessui/react";
 import {cva} from "class-variance-authority";
 import {X} from "lucide-react";
@@ -12,7 +14,7 @@ import {cn} from "../lib/utils";
  * @param children - The content of the popup.
  * @param className - Additional CSS classes for styling.
  * @param size - Size variant of the popup {"lg" | "md" | "xl" | "sm"}.
- *
+ * @param closeButtonClassname - Custom close button classname
  */
 
 export const Popup = ({
@@ -21,11 +23,13 @@ export const Popup = ({
   children,
   className,
   size,
+  closeButtonClassname,
 }: PropsWithChildren<{
   isOpen: boolean;
   className?: string;
   closeModal: () => void;
   size?: "lg" | "md" | "xl" | "sm";
+  closeButtonClassname?: string;
 }>) => {
   const getSize = cva(
     "relative w-full transform overflow-hidden rounded-lg p-6 text-left align-middle shadow-xl transition-all",
@@ -55,7 +59,7 @@ export const Popup = ({
           leave="ease-in duration-200"
           leaveFrom="opacity-100"
           leaveTo="opacity-0">
-          <div className="fixed inset-0 bg-black/80" />
+          <div className="fixed inset-0 bg-black/80 -z-10" />
         </Transition.Child>
 
         <div className="fixed inset-0 overflow-y-auto">
@@ -68,11 +72,14 @@ export const Popup = ({
               leave="ease-in duration-200"
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95">
-              <Dialog.Panel className={cn(className, getSize({size}))}>
+              <Dialog.Panel className={cn("bg-white", className, getSize({size}))}>
                 <button
                   type="button"
                   aria-label="Close"
-                  className="absolute right-5 top-5 rounded-full border-none bg-bw-navy-500 p-2 outline-none">
+                  className={cn(
+                    "absolute right-5 top-5 rounded-full border-none bg-bw-navy-500 p-2 outline-none",
+                    closeButtonClassname,
+                  )}>
                   <X size={23} className="text-white" onClick={closeModal} />
                 </button>
 

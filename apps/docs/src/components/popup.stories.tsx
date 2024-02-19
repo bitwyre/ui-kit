@@ -12,8 +12,13 @@ const ComponentPopUp = () => {
   };
   return (
     <>
-      <Button onClick={showModalHandler}>Show Modal</Button>
-      <Popup isOpen={isOpen} closeModal={closeModalHandler}>
+      <Button variant="subtle" onClick={showModalHandler}>
+        Show Modal
+      </Button>
+      <Popup
+        isOpen={isOpen}
+        closeModal={closeModalHandler}
+        closeButtonClassname="bg-black">
         I am in Popup
       </Popup>
     </>
