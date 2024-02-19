@@ -1,6 +1,7 @@
 {
   "name": "@bitwyre/icons",
-  "version": "0.1.0",
+  "version": "0.2.1",
+  "description": "Bitwyre icons including our icons system",
   "private": false,
   "main": "./src/index.ts",
   "types": "./dist/index.d.ts",
