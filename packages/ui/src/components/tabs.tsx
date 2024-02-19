@@ -5,9 +5,9 @@ import * as React from "react";
 import {cn} from "../lib/utils";
 import {For} from "./common";
 
-const TabsSlider = (props: {id: string}) => (
+const TabsSlider = (props: {id: string; sliderClassName?: string}) => (
   <motion.span
-    className="absolute inset-0 bg-custom-gradient"
+    className={cn("absolute inset-0 bg-custom-gradient", props.sliderClassName)}
     layoutId={props.id}
     transition={{
       type: "spring",
@@ -84,6 +84,10 @@ type TabProps = {
    */
   containerClassName?: string;
   /**
+   * when sliderClassName is passed, the container of the Tabs slider will be rendered with the given className
+   */
+  sliderClassName?: string;
+  /**
    * when triggerClassName is passed, the trigger will be rendered with the given className
    */
   triggerClassName?: string;
@@ -144,7 +148,9 @@ const Tabs = (props: TabProps) => {
             {(item) => (
               <TabsTrigger value={item.value} className="px-5 py-2">
                 <div className="relative z-10">{item.label}</div>
-                {item.value === props.activeTab && <TabsSlider id={id} />}
+                {item.value === props.activeTab && (
+                  <TabsSlider id={id} sliderClassName={props.sliderClassName} />
+                )}
               </TabsTrigger>
             )}
           </For>
