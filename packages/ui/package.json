@@ -1,12 +1,13 @@
 {
   "name": "@bitwyre/ui-kit",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "description": "Component SDK UI Kit for frontend",
   "private": false,
   "files": [
     "dist/",
     "tailwind.config.ts",
-    "postcss.config.js"
+    "postcss.config.js",
+    "global.css"
   ],
   "publishConfig": {
     "access": "public"
@@ -71,7 +72,7 @@
       "import": "./dist/*/index.mjs",
       "types": "./dist/*/index.d.ts"
     },
-    "./global.css": "./src/styles/global.css",
+    "./global.css": "./global.css",
     "./postcss.config": "./postcss.config.js",
     "./tailwind.config": "./tailwind.config.ts"
   },
