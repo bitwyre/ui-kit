@@ -1,11 +1,8 @@
 {
   "name": "@bitwyre/typescript-config",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "private": false,
   "main": "./base.json",
-  "files": [
-    "base.json"
-  ],
   "license": "MIT",
   "publishConfig": {
     "access": "public"

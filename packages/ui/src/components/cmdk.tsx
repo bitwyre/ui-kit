@@ -37,10 +37,9 @@ interface CommandDialogProps extends DialogProps {}
  * React component for rendering a Command dialog.
  * @param {object} props - The component props.
  * @param {React.ReactNode} props.children - The content of the Command dialog.
- * @param {DialogProps} props - Props to be passed to the underlying Dialog component.
+ * @param {CommandDialogProps} props - Props to be passed to the underlying Dialog component.
  * @returns {JSX.Element} CommandDialog component.
  */
-
 const CommandDialog = ({children, ...props}: CommandDialogProps) => {
   return (
     <Dialog {...props}>
@@ -65,8 +64,8 @@ const CommandInput = React.forwardRef<
   React.ElementRef<typeof CommandPrimitive.Input>,
   React.ComponentPropsWithoutRef<typeof CommandPrimitive.Input> & {icon?: JSX.Element}
 >(({className, icon, ...props}, ref) => (
-  <div className="flex gap-x-2 items-center border-b px-3" cmdk-input-wrapper="">
-    {icon ?? <Search size={15} />}
+  <div className="flex gap-x-3 items-center border-b px-3" cmdk-input-wrapper="">
+    {icon ?? <Search size={18} />}
     <CommandPrimitive.Input
       ref={ref}
       className={cn(
@@ -187,7 +186,6 @@ CommandItem.displayName = CommandPrimitive.Item.displayName;
  * @param {React.HTMLAttributes<HTMLSpanElement>} props - Props to be passed to the underlying span element.
  * @returns {JSX.Element} CommandShortcut component.
  */
-
 const CommandShortcut = ({
   className,
   ...props

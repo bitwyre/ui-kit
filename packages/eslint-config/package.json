@@ -1,10 +1,11 @@
 {
   "name": "@bitwyre/eslint-config",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "private": false,
   "main": "./index.js",
   "files": [
-    "index.js"
+    "index.js",
+    "LICENSE"
   ],
   "dependencies": {
     "@types/eslint-config-prettier": "^6.11.0",

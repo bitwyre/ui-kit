@@ -73,7 +73,7 @@ const DrawerContent = React.forwardRef<DrawerContentElement, DrawerContentProps>
       <Vaul.Content
         ref={ref}
         className={cn(
-          "fixed inset-x-0 bottom-0 z-50",
+          "fixed inset-x-0 bottom-0 z-50 outline-none",
           "mt-24 flex h-auto flex-col rounded-t-[10px] bg-bw-navy-800 text-bw-navy-50",
           className,
         )}

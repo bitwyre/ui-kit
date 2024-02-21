@@ -6,6 +6,7 @@ module.exports = {
   content: [
     ...BwTwConfig.content,
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@bitwyre/ui-kit/**/*.{js,ts,jsx,tsx}",
   ],
   plugins: [
     ...BwTwConfig.plugins,

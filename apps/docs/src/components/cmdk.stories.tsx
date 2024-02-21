@@ -12,44 +12,21 @@ import {
   PopoverTrigger,
 } from "@bitwyre/ui-kit";
 import {useState} from "react";
-const frameworks = [
-  {
-    value: "next.js",
-    label: "Next.js",
-  },
-  {
-    value: "sveltekit",
-    label: "SvelteKit",
-  },
-  {
-    value: "nuxt.js",
-    label: "Nuxt.js",
-  },
-  {
-    value: "remix",
-    label: "Remix",
-  },
-  {
-    value: "astro",
-    label: "Astro",
-  },
-];
+
 const ComponentCommand = () => {
   const [open, setOpen] = useState(false);
-  const [value, setValue] = useState("");
+
   return (
     <Popover open={open} onOpenChange={setOpen}>
       <PopoverTrigger asChild>
         <Button variant="subtle" className="w-[200px] justify-between">
-          {value
-            ? frameworks.find((framework) => framework.value === value)?.label
-            : "Select framework..."}
+          Click Me
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-[200px] p-0">
         <Command>
           <CommandInput placeholder="Type a command or search..." />
-          <CommandList>
+          <CommandList className="px-2 mt-1">
             <CommandEmpty>No results found.</CommandEmpty>
             <CommandGroup heading="Suggestions">
               <CommandItem>Calendar</CommandItem>

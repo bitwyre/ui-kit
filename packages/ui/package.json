@@ -1,13 +1,15 @@
 {
   "name": "@bitwyre/ui-kit",
-  "version": "0.1.7",
-  "description": "Component SDK UI Kit for frontend",
+  "license": "MIT",
+  "version": "0.1.8",
+  "description": "Component SDK UI Kit for Bitwyre frontend",
   "private": false,
   "files": [
     "dist/",
     "tailwind.config.ts",
     "postcss.config.js",
-    "global.css"
+    "global.css",
+    "LICENSE"
   ],
   "publishConfig": {
     "access": "public"
@@ -66,11 +68,6 @@
       "import": "./dist/index.mjs",
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
-    },
-    "./*": {
-      "require": "./dist/*/index.js",
-      "import": "./dist/*/index.mjs",
-      "types": "./dist/*/index.d.ts"
     },
     "./global.css": "./global.css",
     "./postcss.config": "./postcss.config.js",
