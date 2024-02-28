@@ -1,7 +1,7 @@
 {
   "name": "@bitwyre/ui-kit",
   "license": "MIT",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Component SDK UI Kit for Bitwyre frontend",
   "private": false,
   "files": [

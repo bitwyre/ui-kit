@@ -11,7 +11,7 @@ const baseClass = cn(
   "disabled:pointer-events-none disabled:opacity-50",
 );
 
-const buttonVariants = cva(baseClass, {
+export const buttonVariants = cva(baseClass, {
   variants: {
     variant: {
       default: "text-black",
@@ -40,7 +40,7 @@ const buttonVariants = cva(baseClass, {
   },
 });
 
-interface ButtonProps
+export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   asChild?: boolean;
