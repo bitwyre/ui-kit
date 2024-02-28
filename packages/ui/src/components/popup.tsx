@@ -50,7 +50,7 @@ export const Popup = ({
 
   return (
     <Transition appear show={isOpen} as={Fragment}>
-      <Dialog as="div" className="relative z-10" onClose={() => {}}>
+      <Dialog as="div" className="relative z-10" onClose={closeModal}>
         <Transition.Child
           as={Fragment}
           enter="ease-out duration-300"
@@ -59,7 +59,7 @@ export const Popup = ({
           leave="ease-in duration-200"
           leaveFrom="opacity-100"
           leaveTo="opacity-0">
-          <div className="fixed inset-0 bg-black/80 -z-10" />
+          <div className="fixed inset-0 -z-10 bg-black/80" />
         </Transition.Child>
 
         <div className="fixed inset-0 overflow-y-auto">
