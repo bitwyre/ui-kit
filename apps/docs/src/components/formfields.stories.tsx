@@ -1,19 +1,19 @@
-import {zodResolver} from "@hookform/resolvers/zod";
-import {useState} from "react";
-import {useForm} from "react-hook-form";
-import {z} from "zod";
 import {
+  Button,
   Form,
   FormControl,
   FormDescription,
   FormField,
-  Button,
+  FormInput,
   FormItem,
   FormLabel,
-  cn,
-  FormInput,
   FormMessage,
+  cn,
 } from "@bitwyre/ui-kit";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {useState} from "react";
+import {useForm} from "react-hook-form";
+import {z} from "zod";
 
 const formSchema = z.object({
   username: z.string().min(2, {
@@ -21,15 +21,17 @@ const formSchema = z.object({
   }),
 });
 
-export function FormComponent() {
-  const [dataForm, setDataForm] = useState<z.infer<typeof formSchema> | null>(null);
+type TUserForm = z.infer<typeof formSchema>;
 
-  const form = useForm<z.infer<typeof formSchema>>({
+export function FormComponent() {
+  const [dataForm, setDataForm] = useState<TUserForm | null>(null);
+
+  const form = useForm<TUserForm>({
     resolver: zodResolver(formSchema),
     defaultValues: {username: ""},
   });
 
-  function onSubmit(values: z.infer<typeof formSchema>) {
+  function onSubmit(values: TUserForm) {
     setDataForm(values);
   }
 

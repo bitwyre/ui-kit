@@ -1,3 +1,5 @@
+"use client";
+
 import * as TabsPrimitive from "@radix-ui/react-tabs";
 import {LayoutGroup, motion} from "framer-motion";
 import * as React from "react";

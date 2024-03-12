@@ -1,6 +1,6 @@
 "use client";
 
-import {SearchIcon, EyeOffIcon, EyeIcon} from "lucide-react";
+import {EyeIcon, EyeOffIcon, SearchIcon} from "lucide-react";
 import {
   useState,
   type ChangeEvent,
@@ -15,22 +15,38 @@ import {cn} from "../lib/utils";
  * @template IP - The type of form field values.
  */
 type InputProps<IP extends FieldValues = UniversalT> = {
-  label: string; // The label for the input field.
-  errors: FieldErrors<IP>; // The errors associated with the input field.
-  customError: string | null; // Custom error message for the input field.
-  labelclassName: string; // The class name for the label.
-  isRequired: boolean; // Indicates if the input field is required.
-  isCustomIconDisabled: boolean; // Indicates if the custom icon is disabled.
-  withSearchIcon: boolean; // Indicates if the search icon is enabled.
-  customIcon: React.JSX.Element; // The custom icon for the input field.
-  inputChildren: () => React.JSX.Element; // The child elements for the input field component.
-  searchIconSize: number; // The size of the search icon.
-  onClickCustomIcon(): void; // The function to handle custom icon click event.
-  typeFlex: "column" | "row"; // The flex layout type for the input field.
-  withErrorIcon: boolean; // Indicates if the error icon is enabled.
-  name: keyof IP; // The name of the input field.
-  withEyeIcon: boolean; // Indicates if the eye icon is enabled.
-  register: UseFormRegister<IP>; // The registration function for the input field.
+  /** The label for the input field. */
+  label: string;
+  /** The errors associated with the input field. */
+  errors: FieldErrors<IP>;
+  /** Custom error message for the input field. */
+  customError: string | null;
+  /** The class name for the label. */
+  labelclassName: string;
+  /** Indicates if the input field is required. */
+  isRequired: boolean;
+  /** Indicates if the custom icon is disabled. */
+  isCustomIconDisabled: boolean;
+  /** Indicates if the search icon is enabled. */
+  withSearchIcon: boolean;
+  /** The custom icon for the input field. */
+  customIcon: React.JSX.Element;
+  /** The child elements for the input field component. */
+  inputChildren: () => React.JSX.Element;
+  /** The size of the search icon. */
+  searchIconSize: number;
+  /** The function to handle custom icon click event. */
+  onClickCustomIcon(): void;
+  /** The flex layout type for the input field. */
+  typeFlex: "column" | "row";
+  /** Indicates if the error icon is enabled. */
+  withErrorIcon: boolean;
+  /** The name of the input field. */
+  name: keyof IP;
+  /** Indicates if the eye icon is enabled. */
+  withEyeIcon: boolean;
+  /** The registration function for the input field. */
+  register: UseFormRegister<IP>;
 } & InputHTMLAttributes<HTMLInputElement>; // Additional HTML input attributes.
 
 const renderErrors = (

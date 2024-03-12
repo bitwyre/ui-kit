@@ -11,10 +11,14 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "editor.formatOnPaste": true,
   "[typescript]": {
-    "editor.codeActionsOnSave": {"source.organizeImports": true}
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
   },
   "[typescriptreact]": {
-    "editor.codeActionsOnSave": {"source.organizeImports": true}
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    }
   },
   "eslint.validate": ["javascript", "javascriptreact", "typescriptreact", "typescript"],
   "eslint.workingDirectories": [

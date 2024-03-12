@@ -1,7 +1,7 @@
 {
   "name": "@bitwyre/ui-kit",
   "license": "MIT",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "description": "Component SDK UI Kit for Bitwyre frontend",
   "private": false,
   "files": [
@@ -56,7 +56,6 @@
     "lucide-react": "^0.314.0",
     "react": "^18.2.0",
     "react-hook-form": "^7.48.2",
-    "react-paginate": "^8.2.0",
     "sonner": "^1.4.0",
     "tailwind-merge": "^2.2.1",
     "tailwindcss-animate": "^1.0.7",
